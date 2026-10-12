@@ -1,8 +1,0 @@
-# --- Core Stack de Procesamiento ---
-# Manejo de DataFrames y lógica de transformación
-pandas>=2.0.0
-numpy>=1.24.0
-
-# --- Almacenamiento (Storage) ---
-# Motor para exportación a Parquet.
-pyarrow==21.0.0

@@ -1,9 +1,15 @@
-# Entorno virtual y caché
+# Entorno y credenciales
 venv/
-__pycache__/
-*.pyc
-
-# Datos y archivos de configuración
 .env
-data/*.json
+*.pem
+
+# Python
+__pycache__/
+.pytest_cache/
+
+# Editor
+.vscode/
+
+# Datos locales: bronze descargado de S3 y salida del modo local
+data/
 output/

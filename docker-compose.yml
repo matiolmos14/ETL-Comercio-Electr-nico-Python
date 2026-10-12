@@ -1,0 +1,20 @@
+services:
+  # Pipeline completo: bronze desde S3 -> silver y gold en S3
+  # docker-compose up --build etl
+  etl:
+    build:
+      context: .
+      target: etl
+    env_file: .env
+    environment:
+      AWS_SHARED_CREDENTIALS_FILE: /home/app/.aws/credentials
+      AWS_CONFIG_FILE: /home/app/.aws/config
+    volumes:
+      - ~/.aws:/home/app/.aws:ro
+
+  # Tests (S3 simulado, no requiere credenciales)
+  # docker-compose run --rm test
+  test:
+    build:
+      context: .
+      target: test
