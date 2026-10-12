@@ -1,4 +1,4 @@
-# Pipeline ETL de e-commerce (arquitectura medallion sobre S3)
+# Pipeline ETL de ecommerce (arquitectura medallion sobre S3)
 
 Pipeline en Python que toma los datos crudos de un e-commerce desde S3, los limpia y calcula cinco reportes de negocio. Todo se guarda en Parquet, separado en tres capas: bronze (crudo), silver (limpio) y gold (reportes). Los reportes de gold también salen en CSV para abrirlos en Excel.
 
